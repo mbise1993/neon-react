@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.min.js',
+    filename: 'index.js',
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],

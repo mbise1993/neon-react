@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import { NeonApp } from 'neon';
-import { mockModule, mockCommand } from 'neon/src/test-utilities';
+import { mockModule, mockCommand } from 'neon/test-utilities';
 
 import { AppProvider } from './app';
 import { useCommand, CommandExecutor } from './command';
