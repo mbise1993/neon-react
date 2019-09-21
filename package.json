@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "description": "React bindings for the Neon framework",
   "author": {
-    "name": "Matt Bise", 
+    "name": "Matt Bise",
     "url": "https://github.com/mbise1993"
   },
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build:dev": "npm run clean && webpack --mode development",
-    "build:prod": "npm run clean && webpack --mode production",
+    "build": "npm run clean && tsc",
     "test": "jest --watch",
-    "prepublish": "npm run build:prod"
+    "prepublish": "npm run build"
   },
   "dependencies": {
+    "neon": "file:../neon",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "typescript": "^3.5.3"
