@@ -1,5 +1,5 @@
 import React from 'react';
-import { StateChangedHook } from 'neon';
+import { StateChangedHook } from '@neon-js/core';
 
 import { ModuleContext } from './module';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
-import { NeonApp } from 'neon';
+import { NeonApp } from '@neon-js/core';
 
 import { AppContext, AppProvider, useApp } from './app';
 

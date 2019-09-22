@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { TestModule } from 'neon/test-utils';
+import { TestModule } from '@neon-js/core/test-utils';
 
 import { createModuleContext } from './module';
 

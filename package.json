@@ -1,10 +1,13 @@
 {
-  "name": "react-neon",
+  "name": "@neon-js/react",
   "version": "0.1.0",
   "description": "React bindings for the Neon framework",
   "author": {
     "name": "Matt Bise",
     "url": "https://github.com/mbise1993"
+  },
+  "repository": {
+    "url": "https://github.com/mbise1993/neon-react"
   },
   "license": "MIT",
   "main": "dist/index.js",
@@ -17,6 +20,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@neon-js/core": "^0.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "typescript": "^3.5.3"

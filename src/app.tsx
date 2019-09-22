@@ -1,5 +1,5 @@
 import React from 'react';
-import { App, NeonApp } from 'neon';
+import { App, NeonApp } from '@neon-js/core';
 
 export const AppContext = React.createContext<App>(new NeonApp(''));
 

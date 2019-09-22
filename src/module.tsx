@@ -1,5 +1,5 @@
 import React from 'react';
-import { Module, Context } from 'neon';
+import { Module, Context } from '@neon-js/core';
 
 export interface ModuleContext<TState> {
   ModuleProvider: React.ComponentType;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
-import { NeonApp } from 'neon';
-import { mockModule, mockCommand } from 'neon/test-utils';
+import { NeonApp } from '@neon-js/core';
+import { mockModule, mockCommand } from '@neon-js/core/test-utils';
 
 import { AppProvider } from './app';
 import { useCommand, CommandExecutor } from './command';

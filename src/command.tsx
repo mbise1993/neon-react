@@ -1,5 +1,5 @@
 import React from 'react';
-import { Command, CanExecuteChangedHook } from 'neon';
+import { Command, CanExecuteChangedHook } from '@neon-js/core';
 
 import { useApp } from './app';
 
