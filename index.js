@@ -1,3 +1,3 @@
-const reactNeon = require('./dist');
+const neonReact = require('./dist');
 
-module.exports = reactNeon.default || reactNeon;
+module.exports = neonReact.default || neonReact;
