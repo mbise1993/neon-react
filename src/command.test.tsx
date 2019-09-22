@@ -22,13 +22,15 @@ describe('Command', () => {
       const hook1 = renderHook(() => useCommand(command1), { wrapper });
       const hook2 = renderHook(() => useCommand(command2), { wrapper });
 
-      hook1.result.current.execute();
+      const args1 = { arg: 1 };
+      hook1.result.current.execute(args1);
       expect(module1.executeCommand).toHaveBeenCalledTimes(1);
-      expect(module1.executeCommand).toHaveBeenCalledWith(command1);
+      expect(module1.executeCommand).toHaveBeenCalledWith(command1, args1);
 
-      hook2.result.current.execute();
+      const args2 = { arg: 2 };
+      hook2.result.current.execute(args2);
       expect(module2.executeCommand).toHaveBeenCalledTimes(1);
-      expect(module2.executeCommand).toHaveBeenCalledWith(command2);
+      expect(module2.executeCommand).toHaveBeenCalledWith(command2, args2);
     });
   });
 
@@ -41,11 +43,13 @@ describe('Command', () => {
       module1.canExecuteCommand = () => true;
       app.attachModule(module1);
 
+      const args = { foo: 'bar' };
+
       const component = render(
         <AppProvider app={app}>
-          <CommandExecutor command={command1}>
+          <CommandExecutor command={command1} args={args}>
             {(canExecute, execute) => (
-              <input role="button" disabled={!canExecute} onClick={execute} />
+              <input role="button" disabled={!canExecute} onClick={() => execute(args)} />
             )}
           </CommandExecutor>
         </AppProvider>,
@@ -56,7 +60,7 @@ describe('Command', () => {
 
       fireEvent.click(button);
       expect(module1.executeCommand).toHaveBeenCalledTimes(1);
-      expect(module1.executeCommand).toHaveBeenCalledWith(command1);
+      expect(module1.executeCommand).toHaveBeenCalledWith(command1, args);
     });
   });
 });

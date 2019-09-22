@@ -1,6 +1,6 @@
 {
   "name": "@neon-js/react",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "React bindings for the Neon framework",
   "author": {
     "name": "Matt Bise",
@@ -20,7 +20,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
-    "@neon-js/core": "^0.1.1",
+    "@neon-js/core": "^0.1.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "typescript": "^3.5.3"
